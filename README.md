@@ -10,7 +10,7 @@ Open `index.html` in a browser. The site works directly from the folder, includi
 
 ## Files
 
-- `index.html` — the complete arrival, destination signposts, conditions, notice, and Municipal Archives with four objects to inspect.
+- `index.html` — the complete arrival, destination signposts, conditions, notice, Municipal Archives with four objects to inspect, and the Records Annex.
 - `archives.html` — a compatibility redirect to `index.html#municipal-archives`, with a fallback link.
 - `styles.css` — the shared design, responsive layouts, keyboard focus, and reduced-motion support.
 - `assets/northridge-arrival.webp` — the town entrance illustration.
@@ -26,11 +26,11 @@ The arrival pairs readable prose with a modest framed view down the road. Blue-g
 
 Objects use native HTML `details` and `summary`: choose a label to inspect it; choose it again to close it. The Lantern starts open. Multiple objects can remain open so there is no forced sequence. The controls work with keyboard, touch, and assistive technology without JavaScript. There is no plot state, audio, tracking, third-party request, backend, authentication, or external font.
 
-The four undeveloped destinations retain the supplied prose and appear as road signs rather than inactive buttons or broken links. The deeper archive is an honest expandable placeholder; it does not point to a missing page or expose the private repository.
+The three remaining undeveloped destinations retain the supplied prose and appear as road signs rather than inactive buttons or broken links. The deeper archive is an honest expandable placeholder; it does not point to a missing page or expose the private repository.
 
 ## Copy and canon
 
-The supplied v0 copy is preserved. The only added visible sentence is functional placeholder text, shown only when the deeper archive is opened: “The deeper archive is not connected yet.” Skip links and accessible labels are navigation aids. Illustrations establish rooms and streets without adding named characters, events, or lore.
+The supplied v0 copy is preserved except for the Records Annex's former coming-soon line, now an Enter the Annex link. The complete Records Annex prose was written by Claude, revised in conversation, and approved by Rae. It is included unchanged with its emphasis preserved. The deeper archive retains the functional placeholder text: “The deeper archive is not connected yet.” Skip links and accessible labels are navigation aids. Illustrations establish rooms and streets without adding named characters, events, or lore.
 
 ## GitHub Pages
 
@@ -50,4 +50,4 @@ The public HTML, CSS, and two WebP images total about 544 KiB. Live browser test
 
 ## Continuous walk
 
-The Archives is part of the homepage HTML. Enter the Archives jumps to `#municipal-archives`; Return to Northridge jumps to `#destinations`. The farewell follows the Archives. The Archives illustration loads lazily. Original prose and native object disclosures are preserved. Readers that retrieve the homepage can receive the Archives text in the same document, though tool extraction and access still vary. No new location lore has been added.
+The Archives is part of the homepage HTML. Enter the Archives jumps to `#municipal-archives`; Return to Northridge jumps to `#destinations`. The Records Annex follows the Archives, and the farewell follows the Annex. Its signpost jumps to `#records-annex`. The Archives illustration loads lazily. Original prose and native object disclosures are preserved. Readers that retrieve the homepage can receive the Archives text in the same document, though tool extraction and access still vary. The Annex's new location details come exclusively from Rae's approved text.

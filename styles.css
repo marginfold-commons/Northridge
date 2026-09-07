@@ -195,3 +195,16 @@ h2 { font-size: clamp(1.625rem, 2.8vw, 2rem); font-weight: 400; line-height: 1.3
 .objects-heading h3 { font-size: clamp(1.625rem, 2.8vw, 2rem); font-weight: 400; line-height: 1.35; }
 .destinations { padding-bottom: 3rem; }
 .closing-paper { border-top: 1px solid var(--rule); }
+
+/* One door down: an unhurried reading room, with a blue ink accent. */
+.annex-location { background: var(--paper-light); color: var(--ink); }
+.annex-reading { max-width: 44rem; padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+.annex-header { padding-bottom: 2rem; border-bottom: 1px solid var(--rule); }
+.annex-header > .place-symbol { display: block; margin-bottom: .8rem; }
+.annex-header h2 { font-size: clamp(1.8rem, 4.4vw, 3rem); letter-spacing: .045em; }
+.annex-prose { margin-top: 2rem; }
+.annex-prose p + p { margin-top: 1.5rem; }
+.annex-desk-sign { padding-block: 1.4rem; border-block: 1px solid var(--rule); }
+.annex-desk-sign strong { color: #345568; }
+.annex-intake-note { padding-left: 1.25rem; border-left: 2px solid #718997; }
+.annex-lantern { text-align: center; }
