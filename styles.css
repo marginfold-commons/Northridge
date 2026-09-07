@@ -1,0 +1,191 @@
+/* Northridge: plain pages, ordinary materials, a little lamplight. */
+:root {
+  color-scheme: light;
+  --dusk: #25383d;
+  --dusk-ink: #f1eee4;
+  --fog-ink: #d2d9d5;
+  --paper: #f1ede2;
+  --paper-light: #faf7ef;
+  --ink: #293c3e;
+  --quiet-ink: #53625e;
+  --rule: #c3c6b8;
+  --brass: #cbb57d;
+  --link: #375547;
+  --violet: #68436a;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 5.5rem; }
+body { margin: 0; font-family: var(--serif); font-size: 1.0625rem; line-height: 1.65; }
+img { display: block; width: 100%; height: auto; }
+figure, h1, h2, h3, p { margin: 0; }
+h1, h2, h3, .object-name, .notebook-title { overflow-wrap: anywhere; }
+.arrival > *, .archive-arrival > *, .road > * { min-width: 0; }
+p + p { margin-top: 1rem; }
+a { color: inherit; text-underline-offset: .25em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+a, summary { -webkit-tap-highlight-color: rgba(120, 112, 70, .2); }
+a:focus-visible, summary:focus-visible { outline: 3px solid currentColor; outline-offset: 5px; }
+[tabindex="-1"]:focus { outline: none; }
+.page-width { width: min(74rem, calc(100% - 6rem)); margin-inline: auto; }
+.skip-link { position: fixed; z-index: 100; top: .75rem; left: .75rem; padding: .65rem 1rem; background: var(--paper-light); color: var(--ink); transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); }
+
+/* Arrival: a modest view from the road, with room to stop and read. */
+.town-page { background: var(--dusk); color: var(--dusk-ink); }
+.arrival { display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; gap: 3.5rem; padding-block: 4rem 4.5rem; }
+.arrival h1 { font-size: clamp(2rem, 4.2vw, 3.9rem); line-height: 1.15; font-weight: 400; letter-spacing: .075em; }
+.whereabouts { margin-top: .7rem; color: var(--fog-ink); font-style: italic; font-size: 1.125rem; }
+.porch-light { margin-top: 2.1rem; font-size: 1.6rem; line-height: 1.4; color: #e8cf98; }
+.arrival-prose { margin-top: 1.2rem; color: var(--fog-ink); max-width: 29rem; }
+.arrival-prose p + p { margin-top: .85rem; }
+.arrival-view { padding: .5rem; border: 1px solid #687370; background: #2c3e42; }
+.arrival-view img { aspect-ratio: 3 / 2; object-fit: contain; }
+
+/* The road names sit on a continuous municipal paper surface. */
+.town-paper { background: var(--paper); color: var(--ink); border-top: 4px solid #a99c73; }
+.destinations { padding-top: 3.2rem; }
+.destinations-heading { display: flex; align-items: center; gap: 2rem; margin-bottom: 1rem; }
+h2 { font-size: clamp(1.625rem, 2.8vw, 2rem); font-weight: 400; line-height: 1.35; }
+.heading-rule { flex: 1; height: 1px; background: var(--rule); }
+.town-layout { display: grid; grid-template-columns: minmax(0, 1fr) 13rem; gap: 4.25rem; }
+.road { display: grid; grid-template-columns: 13.75rem minmax(0, 1fr); gap: 1.6rem; padding-block: 2rem; border-bottom: 1px solid var(--rule); }
+.road-sign { display: grid; grid-template-columns: 1.5rem minmax(0, 1fr); gap: .65rem; align-content: start; align-items: baseline; }
+.place-symbol { font-size: 1.05rem; line-height: 1.5; }
+.road h3 { font-size: 1.4rem; line-height: 1.4; font-weight: 400; }
+.road-sign a { text-decoration: none; }
+.road-sign a:hover { text-decoration: underline; }
+.road-copy { font-size: 1rem; }
+.road-tagline { font-weight: 700; }
+.road-copy p + p { margin-top: .65rem; }
+.road-ahead { font-style: italic; color: var(--quiet-ink); }
+.walk-link { display: inline-block; padding-block: .65rem; margin-top: .3rem; color: var(--link); font-weight: 700; }
+.walk-link span { display: inline-block; margin-left: .35rem; transition: transform 140ms ease; }
+.walk-link:hover span { transform: translateX(3px); }
+.town-notices { padding-top: 2.15rem; }
+.small-label { font-family: var(--sans); font-size: .8125rem; line-height: 1.5; font-weight: 600; letter-spacing: .1em; }
+.conditions { padding: 0 .5rem 1.8rem; }
+.conditions p { margin-top: .9rem; font-size: 1rem; color: var(--quiet-ink); }
+.municipal-notice { margin-top: .5rem; padding: 1.4rem 1.25rem 1.5rem; background: var(--paper-light); border: 1px solid #c6bc9c; border-top: 3px solid #9d8f63; box-shadow: 2px 3px 0 rgba(65, 65, 42, .06); }
+.municipal-notice p { margin-top: .85rem; font-size: 1rem; }
+.town-footer { padding-block: 3.5rem 2.5rem; text-align: center; }
+.town-footer p { font-size: 1.15rem; font-style: italic; color: var(--quiet-ink); }
+.town-footer > span { display: block; margin-top: .9rem; font-size: 1.15rem; }
+
+/* Across the threshold, the paper and lamplight get warmer. */
+.archives-page { background: #eee7d8; color: #3b4036; --ink: #3b4036; --quiet-ink: #606251; --rule: #c4c2af; }
+.return-way { position: sticky; z-index: 10; top: 0; background: var(--dusk); color: var(--dusk-ink); border-bottom: 1px solid #727766; }
+.return-way a { display: inline-block; padding-block: .9rem; font-family: var(--sans); font-size: .9375rem; text-decoration: none; }
+.return-way a:hover { text-decoration: underline; }
+.return-way a span { margin-right: .6rem; }
+.archive-arrival { display: grid; grid-template-columns: .92fr 1.08fr; gap: 3.5rem; align-items: center; padding-block: 3.6rem 3.3rem; }
+.archive-intro h1 { font-size: clamp(2.125rem, 4.4vw, 3.75rem); line-height: 1.1; letter-spacing: .055em; font-weight: 400; }
+.threshold-note { margin-top: 1rem; font-style: italic; color: var(--quiet-ink); }
+.archive-prose { margin-top: 1.8rem; max-width: 30rem; }
+.archive-prose p + p { margin-top: .8rem; }
+.room-warmth { font-size: 1.2rem; }
+.archive-view { padding: .5rem; border: 1px solid #afa889; background: #e5ddc9; }
+.archive-view img { aspect-ratio: 3 / 2; object-fit: contain; }
+.objects-section { border-top: 1px solid var(--rule); padding-block: 2.8rem 0; }
+.objects-heading { display: grid; grid-template-columns: .8fr 1.2fr; gap: 2.5rem; margin-bottom: 2rem; align-items: baseline; }
+.archivist-note { max-width: 23rem; justify-self: end; color: #6b5667; font-size: .9375rem; font-style: italic; }
+.inspection-desk { border-top: 1px solid #90977f; }
+.object { border-bottom: 1px solid var(--rule); }
+.object > summary { display: flex; align-items: center; gap: .9rem; padding: 1.25rem 1rem; cursor: pointer; list-style: none; transition: background-color 140ms ease, color 140ms ease; }
+.object > summary::-webkit-details-marker { display: none; }
+.object > summary::marker { content: ""; }
+.object > summary:hover { background: #e5decf; }
+.object-name { font-size: 1.4rem; line-height: 1.4; font-weight: 400; }
+.object-symbol { width: 1.5rem; font-size: 1.125rem; text-align: center; }
+.inspection-mark { margin-left: auto; color: var(--quiet-ink); font-family: var(--sans); font-size: 1.25rem; font-weight: 400; }
+.inspection-mark::before { content: "+"; }
+.object[open] > summary { color: #3e5440; background: #e5decf; }
+.object[open] .inspection-mark::before { content: "−"; }
+.object-observation { margin: 0 1rem 1.75rem 3.4rem; padding: 1.6rem 2rem 1.75rem; max-width: 40rem; background: var(--paper-light); border-left: 2px solid #b3a16f; }
+.object-observation p + p { margin-top: .55rem; }
+.first-impression { font-size: 1.4rem; }
+.notebook-page { border-left-color: #8a6a87; }
+.notebook-title { font-family: var(--sans); font-size: .9375rem; letter-spacing: .055em; font-weight: 600; line-height: 1.75; max-width: 27rem; padding-block: .6rem; color: var(--violet); }
+.violet-annotation { font-size: 1.75rem; font-style: italic; color: var(--violet); text-decoration: underline; text-underline-offset: .15em; }
+.deeper-archive { padding-block: 3.5rem 4rem; }
+.deeper-archive > p { color: var(--quiet-ink); font-style: italic; }
+.records-threshold { margin-top: .4rem; max-width: 30rem; }
+.records-threshold > summary { display: inline-block; padding-block: .5rem; cursor: pointer; list-style: none; text-decoration: underline; text-underline-offset: .25em; }
+.records-threshold > summary::-webkit-details-marker { display: none; }
+.records-threshold > summary::marker { content: ""; }
+.records-threshold > summary span { margin-left: .4rem; }
+.placeholder-note { margin-top: .55rem; color: var(--quiet-ink); font-family: var(--sans); font-size: .875rem; }
+
+@media (min-width: 90rem) {
+  .arrival { padding-block: 4.7rem 5rem; }
+}
+@media (max-width: 70rem) {
+  .page-width { width: calc(100% - 4rem); }
+  .arrival, .archive-arrival { gap: 2rem; }
+  .town-layout { gap: 2.5rem; grid-template-columns: minmax(0, 1fr) 11rem; }
+  .road { grid-template-columns: 11.5rem minmax(0, 1fr); gap: 1.25rem; }
+  .municipal-notice { padding-inline: 1rem; }
+}
+@media (max-width: 55rem) {
+  .arrival, .archive-arrival { grid-template-columns: 1fr; }
+  .arrival { padding-block: 2.75rem; }
+  .arrival h1 { font-size: clamp(2rem, 7vw, 3.9rem); }
+  .arrival-prose, .archive-prose { max-width: 37rem; }
+  .arrival-view { max-width: 40rem; width: 100%; }
+  .archive-view { max-width: 40rem; width: 100%; }
+  .town-layout { grid-template-columns: 1fr; gap: 0; }
+  .road { grid-template-columns: 13rem minmax(0, 1fr); }
+  .town-notices { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding-top: 2.5rem; }
+  .conditions { padding: 1rem 0; }
+  .municipal-notice { margin-top: 0; }
+  .objects-heading { grid-template-columns: 1fr; gap: .8rem; }
+  .archivist-note { justify-self: start; max-width: none; }
+}
+@media (max-width: 38rem) {
+  body { font-size: 1rem; }
+  .page-width { width: calc(100% - 2.5rem); }
+  .arrival { padding-top: 2.2rem; gap: 1.75rem; }
+  .arrival h1 { font-size: clamp(1.75rem, 7.4vw, 2.75rem); letter-spacing: .045em; }
+  .whereabouts { font-size: 1rem; }
+  .porch-light { margin-top: 1.65rem; font-size: 1.4rem; }
+  .arrival-view, .archive-view { padding: .35rem; }
+  .destinations { padding-top: 2.25rem; }
+  .destinations-heading { gap: 1rem; margin-bottom: .3rem; }
+  .heading-rule { display: none; }
+  .road { grid-template-columns: 1fr; gap: .7rem; padding-block: 1.65rem; }
+  .road-copy { padding-left: 2.15rem; }
+  .road h3 { font-size: 1.35rem; }
+  .town-notices { grid-template-columns: 1fr; gap: .75rem; padding-top: 1.5rem; }
+  .conditions { padding: .75rem .25rem; }
+  .municipal-notice { max-width: 25rem; padding: 1.25rem; }
+  .town-footer { padding-block: 2.5rem 2rem; }
+  .return-way a { padding-block: .9rem; font-size: .875rem; }
+  .archive-arrival { padding-block: 2.3rem 2.5rem; gap: 1.6rem; }
+  .archive-intro h1 { font-size: clamp(1.8rem, 8vw, 2.8rem); letter-spacing: .04em; }
+  .archive-prose { margin-top: 1.5rem; }
+  .room-warmth { font-size: 1.125rem; }
+  .objects-section { padding-top: 2rem; }
+  .objects-heading { margin-bottom: 1.5rem; }
+  .object > summary { padding: 1.1rem .35rem; gap: .7rem; }
+  .object-name { font-size: 1.25rem; }
+  .object-observation { margin: 0 0 1.3rem 1.1rem; padding: 1.25rem 1.25rem 1.4rem; }
+  .deeper-archive { padding-block: 2.5rem 3rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+  .walk-link:hover span { transform: none; }
+}
+@media (forced-colors: active) {
+  .return-way, .municipal-notice, .object-observation { border: 1px solid CanvasText; }
+  .object[open] > summary { border: 1px solid CanvasText; }
+}
+@media print {
+  body, .town-paper { background: white; color: black; }
+  .page-width { width: 100%; }
+  .skip-link, .return-way { display: none; }
+  .arrival, .archive-arrival { padding-block: 1rem; }
+  .arrival-prose, .whereabouts, .porch-light { color: black; }
+  .road, .object { break-inside: avoid; }
+}
