@@ -208,3 +208,8 @@ h2 { font-size: clamp(1.625rem, 2.8vw, 2rem); font-weight: 400; line-height: 1.3
 .annex-desk-sign strong { color: #345568; }
 .annex-intake-note { padding-left: 1.25rem; border-left: 2px solid #718997; }
 .annex-lantern { text-align: center; }
+
+/* Station 17: the same quiet reading rhythm, with a brick-red log rule. */
+.station-location { background: var(--paper); color: var(--ink); }
+.station-log { margin-top: 1.5rem; padding: 1.25rem; border-left: 2px solid #895247; background: var(--paper-light); }
+.station-log strong { font-family: var(--sans); font-size: .9375rem; letter-spacing: .035em; }
