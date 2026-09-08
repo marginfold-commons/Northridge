@@ -213,3 +213,20 @@ h2 { font-size: clamp(1.625rem, 2.8vw, 2rem); font-weight: 400; line-height: 1.3
 .station-location { background: var(--paper); color: var(--ink); }
 .station-log { margin-top: 1.5rem; padding: 1.25rem; border-left: 2px solid #895247; background: var(--paper-light); }
 .station-log strong { font-family: var(--sans); font-size: .9375rem; letter-spacing: .035em; }
+
+/* The shore opens out: sea-washed paper, generous space, and fine tide-like rules. */
+.shore-location { background: #e7edef; color: #293e48; }
+.shore-reading { max-width: 54rem; padding-block: clamp(3rem, 8vw, 6rem); }
+.shore-header > .place-symbol { display: block; margin-bottom: 1.25rem; }
+.shore-header h2 { max-width: 44rem; font-size: clamp(1.8rem, 4.4vw, 3rem); font-weight: 400; letter-spacing: .045em; line-height: 1.3; }
+.shore-arrival { max-width: 40rem; margin-top: 2.5rem; line-height: 1.85; }
+.shore-observations { margin-top: clamp(3rem, 7vw, 5rem); }
+.shore-observations h3 { margin-bottom: 2rem; font-size: clamp(1.625rem, 2.8vw, 2rem); font-weight: 400; }
+.shore-object { border-top: 1px solid #a5b7be; }
+.shore-object:last-child { border-bottom: 1px solid #a5b7be; }
+.shore-object > summary { padding: 1.65rem .5rem; cursor: pointer; font-size: clamp(1.125rem, 2.5vw, 1.4rem); border-radius: .25rem; }
+.shore-object > summary::marker { color: #4a6571; font-size: .7em; }
+.shore-object > summary > span { margin-inline: .35rem .5rem; }
+.shore-object > summary:hover { color: #355b69; text-decoration: underline; text-underline-offset: .25em; }
+.shore-observation { max-width: 40rem; margin-left: clamp(1rem, 4vw, 2.5rem); padding: .25rem .5rem 2.5rem 0; line-height: 1.85; }
+.shore-observation p + p { margin-top: 1.4rem; }
